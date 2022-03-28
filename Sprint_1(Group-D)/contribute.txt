@@ -1,0 +1,5 @@
+
+Tickets : ( Sainath & Tapaswi )
+Movies : ( Tapaswi & Sumanth )
+User : ( Sumanth & varun )
+Theater & Admin : ( varun & Sainath)
