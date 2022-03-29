@@ -66,7 +66,7 @@ export default class server{
                 resp.status(200).send(admin.email);
                 return admin;
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -88,7 +88,7 @@ export default class server{
                     resp.status(500).send("Admin Not Authenticated")
                 }
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -117,7 +117,7 @@ export default class server{
                     resp.status(500).send("Admin Not Authenticated")
                 }
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -139,7 +139,7 @@ export default class server{
                     resp.status(500).send("Admin Not Authenticated")
                 }
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -155,7 +155,7 @@ export default class server{
                     resp.status(500).send("Admin Not Authenticated")
                 }
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -169,7 +169,7 @@ export default class server{
                     resp.status(200).send("Admin Authentication is Required")
                 }
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -193,7 +193,7 @@ export default class server{
                 req.session.user = user;
                 resp.status(200).send(user.email)
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
             
         })
@@ -212,7 +212,7 @@ export default class server{
                 const result = await CtrlMovies.Sort_Movies(data.sort,data.limit,data.page,data.filterBy);
                 resp.status(200).send(result);
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -224,7 +224,7 @@ export default class server{
                 Cinema_List = await CtrlTheater.get_Cinema(Movie_Id);
                 resp.status(200).send(Cinema_List)
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -243,7 +243,7 @@ export default class server{
                     resp.status(500).send("User Not Authenticated")
                 }
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -259,7 +259,7 @@ export default class server{
                     resp.status(200).send("User Authentication is Required")
                 }
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -281,7 +281,7 @@ export default class server{
                 req.session.destroy(() => {});
                 resp.status(200).send("user is logged out")
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -293,7 +293,7 @@ export default class server{
                 const data = await CtrlMovies.FindOne(req.body.id);
                 resp.status(200).send(data)
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
@@ -304,7 +304,7 @@ export default class server{
                 Movie_List = await CtrlMovies.get_Movies();
                 resp.status(200).send(Movie_List);
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
             
         })
@@ -316,7 +316,7 @@ export default class server{
                 movie_List = await CtrlMovies.get_Movies_exp();
                 resp.status(200).send(movie_List)
             }catch(e){
-                resp.status(200).send(e.message);
+                resp.status(500).send(e.message);
             }
         })
 
