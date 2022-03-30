@@ -1,5 +1,8 @@
 
-Tickets : ( Sainath & Tapaswi )
-Movies : ( Tapaswi & Sumanth )
-User : ( Sumanth & varun )
-Theater & Admin : ( varun & Sainath)
+sainath (Tickets)
+
+tapaswi (movies)
+
+varun (theater & admin)
+
+sumanth (user)
